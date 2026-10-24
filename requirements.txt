@@ -1,0 +1,20 @@
+# Remove-Item -Recurse -Force venv
+# py -3.12 -m venv venv
+# .\venv\Scripts\Activate
+# python -m pip install --upgrade pip
+# python -m pip install -r requirements.txt
+
+streamlit # to create the web application and user interface
+numpy 
+pandas
+#Face Recognition (SVM)
+scikit-learn 
+dlib-bin
+git+https://github.com/ageitgey/face_recognition_models  # this is the face recognition model github repo , from this we extraxt the vector embedding of the face and then we use SVM to classify the face
+setuptools<70.0.0  # this is to retrive the github repo and to avoid the error of "error: invalid command 'bdist_wheel'" while installing dlib-bin
+supabase # provide database and authentication services for the application
+bcrypt #hash the password before storing it in the database
+segno # generate QR code for the user to scan and login
+Pillow # to handle image processing and manipulation
+librosa # to handle audio processing and manipulation 
+resemblyzer # make embeddings of the audio and then we use SVM to classify the audio and compare the embeddings of the audio with the embeddings of the audio stored in the database
